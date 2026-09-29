@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provenance prototype</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; max-width: 60rem; margin: 2rem auto; padding: 0 1rem; }
+    .ProseMirror { border: 1px solid #ccc; border-radius: 6px; padding: 0.75rem 1rem; min-height: 6rem; outline: none; }
+    .provenance[data-origin="tesseract"] { background: #fff4d6; }
+    .provenance[data-origin="llm"] { background: #e3ecff; }
+    .provenance[data-origin="human"] { background: #dcf5e3; }
+    cite.bible-ref { font-style: normal; text-decoration: underline dotted; }
+    .legend span { padding: 0 0.4rem; margin-right: 0.5rem; }
+    pre { background: #f6f6f6; padding: 0.75rem; overflow: auto; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <h1>Provenance prototype</h1>
+  <p class="legend">
+    <span class="provenance" data-origin="tesseract">Tesseract</span>
+    <span class="provenance" data-origin="llm">LLM</span>
+    <span class="provenance" data-origin="human">Human</span>
+  </p>
+  <div id="editor"></div>
+  <div class="grid">
+    <section><h2>Reading HTML</h2><div id="reading"></div></section>
+    <section><h2>Event log</h2><pre id="events"></pre></section>
+  </div>
+  <section><h2>Stand-off export</h2><pre id="standoff"></pre></section>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
