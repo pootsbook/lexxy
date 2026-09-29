@@ -5,7 +5,9 @@
   "scripts": {
     "test": "vitest run",
     "test:browser": "playwright test",
-    "demo": "vite demo"
+    "demo": "vite demo",
+    "build:rails": "vite build --config vite.rails.config.js",
+    "test:rails": "playwright test --config playwright.rails.config.js"
   },
   "dependencies": {
     "@tiptap/core": "^3.31.3",

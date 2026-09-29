@@ -1,0 +1,458 @@
+{
+  "corrected_paragraph": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "tesseract",
+                    "run": "r1",
+                    "by": null,
+                    "session": null
+                  }
+                }
+              ],
+              "text": "work tog"
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "human",
+                    "run": null,
+                    "by": "ruth",
+                    "session": "s1"
+                  }
+                }
+              ],
+              "text": "e"
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "tesseract",
+                    "run": "r1",
+                    "by": null,
+                    "session": null
+                  }
+                }
+              ],
+              "text": "ther ("
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "tesseract",
+                    "run": "r1",
+                    "by": null,
+                    "session": null
+                  }
+                },
+                {
+                  "type": "bibleRef",
+                  "attrs": {
+                    "osis": "Rom.8.28"
+                  }
+                }
+              ],
+              "text": "Rom 8:28"
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "tesseract",
+                    "run": "r1",
+                    "by": null,
+                    "session": null
+                  }
+                }
+              ],
+              "text": ")"
+            }
+          ]
+        }
+      ]
+    },
+    "standoff": [
+      {
+        "type": "paragraph",
+        "pos": 0,
+        "text": "work together (Rom 8:28)",
+        "marks": [
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "tesseract",
+              "run": "r1",
+              "by": null,
+              "session": null
+            },
+            "start": 0,
+            "end": 8
+          },
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "human",
+              "run": null,
+              "by": "ruth",
+              "session": "s1"
+            },
+            "start": 8,
+            "end": 9
+          },
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "tesseract",
+              "run": "r1",
+              "by": null,
+              "session": null
+            },
+            "start": 9,
+            "end": 24
+          },
+          {
+            "type": "bibleRef",
+            "attrs": {
+              "osis": "Rom.8.28"
+            },
+            "start": 15,
+            "end": 23
+          }
+        ]
+      }
+    ]
+  },
+  "nested_structure": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "tesseract",
+                    "run": "r2",
+                    "by": null,
+                    "session": null
+                  }
+                }
+              ],
+              "text": "Chapter"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "provenance",
+                          "attrs": {
+                            "origin": "tesseract",
+                            "run": "r2",
+                            "by": null,
+                            "session": null
+                          }
+                        }
+                      ],
+                      "text": "first"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "provenance",
+                          "attrs": {
+                            "origin": "tesseract",
+                            "run": "r2",
+                            "by": null,
+                            "session": null
+                          }
+                        }
+                      ],
+                      "text": "second"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "provenance",
+                          "attrs": {
+                            "origin": "human",
+                            "run": null,
+                            "by": "ruth",
+                            "session": "s1"
+                          }
+                        }
+                      ],
+                      "text": "line"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "quoted"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "paragraph"
+        }
+      ]
+    },
+    "standoff": [
+      {
+        "type": "heading",
+        "pos": 0,
+        "text": "Chapter",
+        "marks": [
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "tesseract",
+              "run": "r2",
+              "by": null,
+              "session": null
+            },
+            "start": 0,
+            "end": 7
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "pos": 11,
+        "text": "first",
+        "marks": [
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "tesseract",
+              "run": "r2",
+              "by": null,
+              "session": null
+            },
+            "start": 0,
+            "end": 5
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "pos": 20,
+        "text": "second\nline",
+        "marks": [
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "tesseract",
+              "run": "r2",
+              "by": null,
+              "session": null
+            },
+            "start": 0,
+            "end": 6
+          },
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "human",
+              "run": null,
+              "by": "ruth",
+              "session": "s1"
+            },
+            "start": 7,
+            "end": 11
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "pos": 36,
+        "text": "quoted",
+        "marks": [
+          {
+            "type": "bold",
+            "attrs": {},
+            "start": 0,
+            "end": 6
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "pos": 46,
+        "text": "",
+        "marks": []
+      }
+    ]
+  },
+  "astral_characters": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "tesseract",
+                    "run": "r3",
+                    "by": null,
+                    "session": null
+                  }
+                }
+              ],
+              "text": "𝔊od "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "human",
+                    "run": null,
+                    "by": "ruth",
+                    "session": "s1"
+                  }
+                }
+              ],
+              "text": "🙏"
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "provenance",
+                  "attrs": {
+                    "origin": "tesseract",
+                    "run": "r3",
+                    "by": null,
+                    "session": null
+                  }
+                }
+              ],
+              "text": " amen"
+            }
+          ]
+        }
+      ]
+    },
+    "standoff": [
+      {
+        "type": "paragraph",
+        "pos": 0,
+        "text": "𝔊od 🙏 amen",
+        "marks": [
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "tesseract",
+              "run": "r3",
+              "by": null,
+              "session": null
+            },
+            "start": 0,
+            "end": 5
+          },
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "human",
+              "run": null,
+              "by": "ruth",
+              "session": "s1"
+            },
+            "start": 5,
+            "end": 7
+          },
+          {
+            "type": "provenance",
+            "attrs": {
+              "origin": "tesseract",
+              "run": "r3",
+              "by": null,
+              "session": null
+            },
+            "start": 7,
+            "end": 12
+          }
+        ]
+      }
+    ]
+  }
+}

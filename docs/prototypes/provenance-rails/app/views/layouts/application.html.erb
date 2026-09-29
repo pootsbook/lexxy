@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= content_for(:title) || "Provenance" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag :app %>
+    <%= yield :head %>
+  </head>
+
+  <body>
+    <header class="masthead">
+      <%= link_to "Documents", root_path %>
+      <%= form_with url: citations_path, method: :get, class: "inline-form" do |form| %>
+        <%= form.search_field :ref, value: params[:ref], placeholder: "Rom.8.28 or Rom.8", "aria-label": "Search by citation" %>
+        <%= form.submit "Find citations" %>
+      <% end %>
+      <%= form_with url: session_path, method: :patch, class: "inline-form" do |form| %>
+        <%= form.text_field :user_name, value: Current.user_name, "aria-label": "Your name" %>
+        <%= form.submit "Edit as" %>
+      <% end %>
+    </header>
+    <main><%= yield %></main>
+  </body>
+</html>

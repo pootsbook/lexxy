@@ -1,0 +1,26 @@
+<% content_for :title, @document.title %>
+<article class="reading">
+  <h1><%= @document.title %></h1>
+  <%= @document.reading_html %>
+</article>
+
+<aside class="document-tools">
+  <%= link_to "Edit", edit_document_path(@document) %> ·
+  <%= link_to "PDF", document_path(@document, format: :pdf) %> ·
+  <%= link_to "Typst source", document_path(@document, format: :typ) %> ·
+  <%= link_to "Corrections", document_corrections_path(@document) %>
+
+  <h2>Provenance</h2>
+  <dl class="summary">
+    <% @document.provenance_summary.sort.each do |origin, characters| %>
+      <dt><%= origin %></dt><dd><%= number_with_delimiter(characters) %> characters</dd>
+    <% end %>
+  </dl>
+
+  <h2>Citations</h2>
+  <ul>
+    <% @document.citations.order(:block_index, :start_offset).each do |citation| %>
+      <li><%= link_to citation.osis, citations_path(ref: citation.osis) %></li>
+    <% end %>
+  </ul>
+</aside>

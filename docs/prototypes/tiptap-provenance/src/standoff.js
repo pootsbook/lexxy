@@ -8,19 +8,28 @@ export function toStandoff(doc) {
     if (!node.isTextblock) return true
 
     const marks = []
-    let offset = 0
+    let text = ""
     node.forEach(child => {
+      const piece = inlineText(child)
       if (child.isText) {
-        child.marks.forEach(mark => extendOrAdd(marks, mark, offset, offset + child.text.length))
+        child.marks.forEach(mark => extendOrAdd(marks, mark, text.length, text.length + piece.length))
       }
-      offset += child.isText ? child.text.length : 0
+      text += piece
     })
 
-    blocks.push({ type: node.type.name, pos, text: node.textContent, marks })
+    blocks.push({ type: node.type.name, pos, text, marks })
     return false
   })
 
   return blocks
+}
+
+// Offsets count what a reader sees: a hard break is a newline, other inline
+// leaves count as nothing. The Rails side (Document::Body) uses the same rule.
+function inlineText(node) {
+  if (node.isText) return node.text
+  if (node.type.name === "hardBreak") return "\n"
+  return ""
 }
 
 function extendOrAdd(marks, mark, start, end) {

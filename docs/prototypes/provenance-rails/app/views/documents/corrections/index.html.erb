@@ -1,0 +1,23 @@
+<% content_for :title, "Corrections to #{@document.title}" %>
+<h1>Corrections to <%= link_to @document.title, @document %></h1>
+
+<div class="table-scroll">
+<table class="corrections">
+  <thead><tr><th>When</th><th>Who</th><th>What</th><th>Replaced</th><th>How</th></tr></thead>
+  <tbody>
+    <% @corrections.each do |event| %>
+      <tr>
+        <td><%= l event.created_at, format: :short %></td>
+        <td><%= event.user_name %></td>
+        <td><%= event.kind %> <q><%= event.text %></q></td>
+        <td>
+          <% Array(event.replaced).each do |piece| %>
+            <q><%= piece["text"] %></q> <small><%= piece.dig("provenance", "origin") || "unknown" %> <%= piece.dig("provenance", "run") %></small>
+          <% end %>
+        </td>
+        <td><%= event.ui_event || "typing" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

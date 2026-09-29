@@ -1,0 +1,20 @@
+<% content_for :title, "Documents" %>
+<h1>Documents</h1>
+
+<%= form_with url: documents_path, method: :get, class: "inline-form" do |form| %>
+  <%= form.search_field :q, value: params[:q], placeholder: "Search text", "aria-label": "Search text" %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<ul class="documents">
+  <% @documents.each do |document| %>
+    <li>
+      <%= link_to document.title, document %>
+      <small><%= pluralize(document.citations.size, "citation") %> · updated <%= time_ago_in_words(document.updated_at) %> ago</small>
+    </li>
+  <% end %>
+</ul>
+
+<% if @documents.none? %>
+  <p>No documents yet. Import OCR output with <code>POST /ocr_imports</code> or run <code>bin/rails db:seed</code>.</p>
+<% end %>

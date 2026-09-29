@@ -1,0 +1,13 @@
+// 6 × 9 in trade paperback. Mirror margins: the inside edge is wider for the binding.
+#set document(title: <%= raw Document::TypstSource.string(@document.title) %>)
+#set page(width: 6in, height: 9in, margin: (inside: 0.875in, outside: 0.625in, top: 0.75in, bottom: 0.875in), numbering: "1")
+#set text(font: "Libertinus Serif", size: 10.5pt, lang: "en")
+#set par(justify: true, leading: 0.62em, first-line-indent: 1.2em)
+#show heading: set block(above: 1.6em, below: 0.9em)
+
+#let bibleref(osis, body) = text(style: "italic", body)
+
+#align(center, text(size: 18pt, weight: "bold", <%= raw Document::TypstSource.string(@document.title) %>))
+#v(1.5em)
+
+<%= raw @body %>

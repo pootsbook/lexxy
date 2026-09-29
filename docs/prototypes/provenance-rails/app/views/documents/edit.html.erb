@@ -1,0 +1,28 @@
+<% content_for :title, "Editing #{@document.title}" %>
+<% content_for :head do %>
+  <script type="module" src="/editor/editor.js"></script>
+<% end %>
+
+<h1><%= @document.title %></h1>
+<p class="legend">
+  <span class="provenance" data-origin="tesseract">Tesseract</span>
+  <span class="provenance" data-origin="llm">LLM</span>
+  <span class="provenance" data-origin="human">Human</span>
+  Click a character to see where it came from.
+</p>
+
+<%= tag.div id: "editor", class: "editor", data: {
+      body: @document.body.to_json,
+      update_url: document_path(@document, format: :json),
+      provenance_url: document_provenance_path(@document, format: :json),
+      human: { origin: "human", by: Current.user_name, session: Current.editing_session }.to_json
+    } %>
+
+<p>
+  <button type="button" id="save">Save</button>
+  <span id="status" role="status"></span>
+  <%= link_to "Done", @document %>
+</p>
+<pre id="origin" class="origin" aria-live="polite"></pre>
+
+<noscript>The editor needs <code>public/editor/editor.js</code>: build it with <code>npm run build:rails</code> in the tiptap-provenance prototype.</noscript>

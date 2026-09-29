@@ -1,0 +1,20 @@
+<% content_for :title, "Citations of #{@reference}" %>
+<h1>Citations<%= " of #{@reference}" if @reference.present? %></h1>
+
+<% if @error %>
+  <p class="error"><%= @error %>. Use OSIS form: <code>Rom.8.28</code>, <code>Rom.8</code>, <code>Rom.8.28-Rom.8.30</code>.</p>
+<% end %>
+
+<ol class="citations">
+  <% @citations.each do |citation| %>
+    <% snippet = citation.snippet %>
+    <li>
+      <%= link_to citation.document.title, citation.document %> — <%= citation.osis %>
+      <blockquote>…<%= snippet[:before] %><mark><%= snippet[:cited] %></mark><%= snippet[:after] %>…</blockquote>
+    </li>
+  <% end %>
+</ol>
+
+<% if @reference.present? && @citations.none? && !@error %>
+  <p>Nothing cites <%= @reference %> yet.</p>
+<% end %>

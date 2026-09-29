@@ -11,7 +11,11 @@ npm install
 npm test               # Vitest + jsdom: transaction-level behaviour (16 tests)
 npm run test:browser   # Playwright + Chromium: real keyboard, IME, clipboard (6 tests)
 npm run demo           # http://localhost:5173 — colour-coded editor, event log, reading HTML, stand-off JSON
+npm run build:rails    # builds the editor into ../provenance-rails/public/editor for the Rails app
+npm run test:rails     # end-to-end against the Rails app (needs Ruby, and Typst for the PDF step)
 ```
+
+The server side (storage, indexing, citation search, provenance lookup, PDF) is in [`../provenance-rails`](../provenance-rails).
 
 Playwright uses `/opt/pw-browsers/chromium` by default; set `CHROMIUM_PATH` to point elsewhere, or delete `launchOptions` in `playwright.config.js` to use Playwright's own browsers.
 

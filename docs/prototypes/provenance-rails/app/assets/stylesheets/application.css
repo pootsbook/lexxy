@@ -1,0 +1,30 @@
+:root {
+  --ink: #1d1d1f; --muted: #6b6b70; --line: #d9d9de; --paper: #ffffff;
+  --tesseract: #fff1cc; --llm: #dde8ff; --human: #d9f3e1; --mark: #fff3a8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #ececf0; --muted: #a1a1a8; --line: #3a3a40; --paper: #17171a;
+          --tesseract: #4a3d12; --llm: #1f2d4f; --human: #173a25; --mark: #5a4e10; }
+}
+body { font: 16px/1.55 system-ui, sans-serif; color: var(--ink); background: var(--paper); margin: 0; }
+main { max-width: 48rem; margin: 0 auto; padding: 1rem; }
+.masthead { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; align-items: center; padding: 0.75rem 1rem; border-bottom: 1px solid var(--line); }
+.inline-form { display: flex; gap: 0.4rem; }
+input, button { font: inherit; }
+.reading { font-family: Georgia, serif; font-size: 1.1rem; }
+.bible-ref { font-style: italic; }
+.document-tools { border-top: 1px solid var(--line); margin-top: 2rem; color: var(--muted); }
+.summary { display: grid; grid-template-columns: max-content 1fr; gap: 0.2rem 1rem; }
+.summary dd { margin: 0; }
+.editor .ProseMirror { border: 1px solid var(--line); border-radius: 6px; padding: 0.75rem 1rem; min-height: 8rem; outline: none; font-family: Georgia, serif; }
+.provenance[data-origin="tesseract"] { background: var(--tesseract); }
+.provenance[data-origin="llm"] { background: var(--llm); }
+.provenance[data-origin="human"] { background: var(--human); }
+.legend .provenance { padding: 0 0.4rem; margin-right: 0.4rem; }
+.origin { background: color-mix(in srgb, var(--line) 35%, transparent); padding: 0.75rem; overflow-x: auto; font-size: 0.85rem; min-height: 2rem; }
+.table-scroll { overflow-x: auto; }
+.corrections { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.corrections th, .corrections td { border-bottom: 1px solid var(--line); padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+.citations blockquote { margin: 0.25rem 0 1rem; color: var(--muted); }
+mark { background: var(--mark); color: inherit; }
+.error { color: #c0392b; }
